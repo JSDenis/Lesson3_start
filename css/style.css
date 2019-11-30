@@ -82,8 +82,10 @@ header .logo{
 
 .container2{
 	background-image: url('../images/top_background.png');
-	height: 800px;
-	background-size: 100%;
+	height: calc(100vh - 100px);
+	max-height: 800px;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 .container2 h1{
@@ -91,7 +93,7 @@ header .logo{
 	font-weight: bold;
 	color: #ffffff;
 	text-align: center;
-	padding-top: 220px;
+	padding-top: 20vh;
 }
 
 .container2 i{
@@ -135,6 +137,7 @@ header .logo{
 .container4 .item{
 	display: inline-block;
 	width: 30%;
+	min-width: 300px;
 	border: 1px solid #000;
 	height: 150px;
 	margin: 1.45%;
@@ -174,5 +177,45 @@ header .logo{
 
 .container5 .item_img:hover .hover_cart{
     display: block;
+}
+
+
+@media(max-width:1250px){
+	.center{
+		width: 90%;
+	}
+	.container4 .item{
+		width: 43%;
+		margin: 1.45% 3% 1.45% 3%;
+	}
+}
+
+@media(max-width: 768px){
+	.container2 i{
+		width: 80%;
+	}
+	.container4 .item{
+		display: block;
+		width:50%;
+		margin: 1.45% auto;
+	}
+}
+
+@media(max-width: 592px){
+	.container2 h1{
+		font-size: 70px;
+	}
+}
+
+@media(max-width: 425px){
+	.container5 .gallery .item_img{
+		min-width: 280px;
+	}
+}
+
+@media(max-width: 375px){
+	.container4 .item{
+		min-width: 250px;
+	}
 }
 
